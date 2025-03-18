@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обработка массива</title>
+  <script>
+    function processArray(arr) {
+      let sum = 0, count = 0;
+      for (let i = 1; i < arr.length; i += 2) {
+        sum += arr[i];
+        count++;
+      }
+      let avg = count > 0 ? sum / count : 0;
+      return { sum, avg };
+    }
+  </script>
+</head>
+<body>
+<h2>Результаты обработки массива</h2>
+<p id="result1"></p>
+<p id="result2"></p>
+
+<script>
+  let arr1 = [3, 7, 1, 9, 4, 8, 6, 5, 2, 10];
+  let arr2 = [15, 22, 13, 44, 55, 66, 77, 88, 99];
+
+  let res1 = processArray(arr1);
+  let res2 = processArray(arr2);
+
+  document.getElementById("result1").textContent = `Массив 1: сумма = ${res1.sum}, среднее = ${res1.avg}`;
+  document.getElementById("result2").textContent = `Массив 2: сумма = ${res2.sum}, среднее = ${res2.avg}`;
+</script>
+</body>
+</html>
