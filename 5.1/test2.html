@@ -3,27 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Тест по математике - Вопрос 2</title>
-  <script>
-    function checkAnswer() {
-      let userAnswer = document.forms["quizForm"]["answer"].value;
-      let correctAnswer = document.forms["quizForm"].dataset.correct;
-      if (userAnswer === correctAnswer) {
-        alert("Правильно!");
-      } else {
-        alert("Неправильно!");
-      }
-    }
-  </script>
+  <title>Тест по тригонометрии 2</title>
+  <script src="script.js" defer></script>
 </head>
 <body>
-<h2>Математический тест</h2>
-<form name="quizForm" data-correct="9">
-  <p>Сколько будет 3 × 3?</p>
-  <input type="text" name="answer">
+<h2>Тест по тригонометрии</h2>
+<form name="quizForm" data-correct="2">
+  <p>Чему равен cos(60°)?</p>
+  <label>
+    <input type="radio" name="answer" value="1"> 0
+  </label><br>
+  <label>
+    <input type="radio" name="answer" value="2"> 0.5
+  </label><br>
+  <label>
+    <input type="radio" name="answer" value="3"> 1
+  </label><br>
+  <label>
+    <input type="radio" name="answer" value="4"> -1
+  </label><br>
   <button type="button" onclick="checkAnswer()">Проверить</button>
 </form>
 <br>
-<a href="test3.html">Следующий</a>
+<a href="test3.html">Следующий тест</a>
 </body>
 </html>

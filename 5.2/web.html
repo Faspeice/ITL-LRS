@@ -4,23 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Форма для ввода песни</title>
-    <script>
-        function addVerse() {
-            let verseText = document.getElementById("verseInput").value;
-            if (verseText.trim() === "") {
-                alert("Введите текст куплета!");
-                return;
-            }
-
-            let songContainer = document.getElementById("songContainer");
-            let newVerse = document.createElement("p");
-            newVerse.classList.add("verse");
-            newVerse.textContent = verseText;
-            songContainer.appendChild(newVerse);
-
-            document.getElementById("verseInput").value = "";
-        }
-    </script>
+    <script src="script.js" defer></script>
     <style>
         .verse {
             font-weight: bold;
