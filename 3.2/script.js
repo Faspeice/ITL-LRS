@@ -7,6 +7,7 @@ let book = {
 };
 
 book["publisher"] = "Русский вестник";
+book.somesome = "ssss";
 
 delete book["pages"];
 
@@ -19,3 +20,20 @@ book.displayInfo = function() {
     }
     alert(info);
 };
+
+function addInfo(){
+    let infoName = prompt("Введите название свойства").toLowerCase();
+    let info = prompt("Введите значение").toLowerCase();
+    book.addProperty(infoName,info)
+}
+function deleteInfo(){
+    let infoName = prompt("Введите название свойства").toLowerCase();
+    book.deleteProperty(infoName)
+}
+book.addProperty = function (infoName, info) {
+    book[infoName] = info
+};
+
+book.deleteProperty = function(infoName) {
+    delete book[infoName]
+}
